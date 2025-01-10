@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
     }else {
       const timeMenu = document.querySelector(".time__menu")
       const h1 = document.createElement("h1")
+      h1.classList.add("empty-entries")
       h1.innerText = "You don't have any entries yet"
       timeMenu.append(h1)
     }
