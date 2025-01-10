@@ -1,0 +1,35 @@
+.time {
+
+  &__wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__item {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__item + &__item {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 4px 8px;
+  }
+}

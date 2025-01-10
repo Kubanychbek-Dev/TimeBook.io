@@ -1,0 +1,71 @@
+.header {
+  background-color: #395899;
+  padding: 20px 0;
+  margin-bottom: 80px;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: #FEFFFB;
+}
+
+.title-link {
+  text-decoration: none;
+  color: #FEFFFB;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flash {
+  margin-bottom: 60px;
+  border: 2px solid #333;
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.flash-inside {
+  opacity: 0;
+}
+
+.flash-inside--show {
+  opacity: 1;
+}
+
+.flash-show {
+  animation: flash 2.6s;
+}
+ 
+@keyframes flash {
+  0% {
+    outline: 100px solid green;
+    background-color: green;
+  }
+}
+
+.btn {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.btn:hover {
+  border: 1px solid #333;
+  background-color: green;
+}
