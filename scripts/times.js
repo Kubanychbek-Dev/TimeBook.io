@@ -11,8 +11,11 @@ window.addEventListener("load", () => {
         li.setAttribute("id", time.id)
         li.classList.add("time__item")
         li.innerHTML = `
-        ${time.date}/${time.month}/${time.year}-${time.hour}:${time.minute} <span id=${time.id} class="time__btn">X</span>
+        ${time.date}/${time.month}/${time.year}-${time.hour}:${time.minute} 
+        <span class="note">(${time.note})</span>
+         <span id=${time.id} class="time__btn">X</span>
         `
+
         timeMenu.append(li)
       })
     }else {
