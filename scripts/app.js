@@ -29,7 +29,7 @@ window.addEventListener("load", ()=> {
       return count + 1
     }
 
-    addTimes(date, month, year, hour, minute) {
+    addTimes(date, month, year, hour, minute, note = "") {
       let times = this.getTimes()
       let id = this.getId()
 
@@ -39,7 +39,8 @@ window.addEventListener("load", ()=> {
         month: month,
         year: year,
         hour: hour,
-        minute: minute
+        minute: minute,
+        note: note
       }
       times.push(timeObj)
       localStorage.setItem(this.key, JSON.stringify(times))
@@ -91,8 +92,15 @@ window.addEventListener("load", ()=> {
     const year = now.getFullYear();
     const hour = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
     const minute = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    const note = prompt("Enter a note or simply click Dismiss.")
+
+    if (note) {
+      store.addTimes(date, month, year, hour, minute, note);
+    }else {
+      store.addTimes(date, month, year, hour, minute);
+    }
     
-    store.addTimes(date, month, year, hour, minute);
+    
   }
 
 
